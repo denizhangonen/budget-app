@@ -1,16 +1,20 @@
 import React from "react";
 
-import { Switch, withRouter, Redirect } from "react-router-dom";
+import { Switch, withRouter, Redirect, Route } from "react-router-dom";
 
 import logo from "./logo.svg";
 import "./App.css";
 
 import Layout from "./hoc/Layout/Layout";
+import Expenses from "./containers/Expenses/Expenses";
+import NewExpense from "./containers/NewExpense/NewExpense";
 
 class App extends React.Component {
   render() {
     const routes = (
       <Switch>
+        <Route path="/expenses" component={Expenses} />
+        <Route path="/new-expense" exact component={NewExpense} />
         <Redirect to="/" />
       </Switch>
     );

@@ -19,7 +19,7 @@ const navigationItems = props => {
   return (
     <StyledList>
       <NavigationItem link="new-expense"> New Expense</NavigationItem>
-      <NavigationItem link="expense" >Expenses</NavigationItem>
+      <NavigationItem link="expenses" >Expenses</NavigationItem>
     </StyledList>
   );
 };
