@@ -2,19 +2,32 @@ import React from "react";
 
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 
 const StyledListItem = styled.li`
-  margin: 10px 0;
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
+  margin: 0 16px;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+
+  a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    padding: 5px 0;
+  }
+
+  a: hover {
+    text-decoration: none;
+    color: #ffffff;    
+    border-bottom: 5px solid #ffffff;
+  }
 `;
 
 const NavigationItem = props => {
   return (
     <StyledListItem>
-      <NavLink to={props.link} >{props.children}</NavLink>
+      <NavLink to={props.link}>{props.children}</NavLink>
     </StyledListItem>
   );
 };

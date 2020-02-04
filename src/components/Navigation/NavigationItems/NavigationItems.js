@@ -8,10 +8,11 @@ const StyledList = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
+  display: inline-block;
   flex-flow: column;
-  align-items: center;
+  align-items: right;
   height: 100%;
+
 `;
 
 const navigationItems = props => {
